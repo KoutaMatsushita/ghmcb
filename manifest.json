@@ -1,0 +1,30 @@
+{
+  "name": "Github Merge Comment Builder",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "マージコメントを自動挿入したい",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "options_page": "options.html",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/nekojarashi/*/pull/*"
+      ],
+      "js": [
+        "dist/contentscript.es.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ]
+}
