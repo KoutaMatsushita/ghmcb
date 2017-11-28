@@ -18,7 +18,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/nekojarashi/*/pull/*"
+        "https://github.com/*"
       ],
       "js": [
         "dist/contentscript.es.js"
